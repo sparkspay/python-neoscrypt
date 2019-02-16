@@ -13,7 +13,7 @@ neoscrypt_module = Extension('neoscrypt',
                              include_dirs=['.', 'src'])
 
 setup(name='neoscrypt',
-      version='1.2.0',
+      version='1.2.1',
       description='Bindings for the NeoScrypt proof-of-work algorithm',
       author='z3r0 m0r4k',
       author_email='mor4k@outlook.com',
