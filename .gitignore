@@ -1,0 +1,11 @@
+build/ 
+dist/ 
+neoscrypt.egg-info/
+
+
+.idea/
+
+#*.o
+#*.dll
+#*.dylib
+#neoscrypt/neoscrypt
