@@ -7,8 +7,8 @@ python-neoscrypt-wrapper
 
 This Software needs compile (gcc, mingw ...)
 
-Cythonized
-----------
+Install from git
+----------------
 
 Compiling and installing as PythonModule (python2/python3)::
 
