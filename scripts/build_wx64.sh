@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEFINES="-DNEOSCRYPT_ASM -DNEOSCRYPT_OPT -DNEOSCRYPT_MINER_4WAY -DNEOSCRYPT_SHA256"
+DEFINES="-DNEOSCRYPT_OPT -DNEOSCRYPT_MINER_4WAY -DNEOSCRYPT_SHA256"
 
 CC="x86_64-w64-mingw32-gcc"
 CFLAGS="-Wall -O2 -fomit-frame-pointer -fno-stack-protector"
@@ -13,11 +13,6 @@ cd ../src
 echo "$CC $CFLAGS $DEFINES -c neoscrypt.c"
 `$CC $CFLAGS $DEFINES -c neoscrypt.c`
 
-echo "$CC $CFLAGS $DEFINES -c neoscrypt_test.c"
-`$CC $CFLAGS $DEFINES -c neoscrypt_test.c`
 
-echo "$CC $DEFINES -c neoscrypt_asm.S"
-`$CC $DEFINES -c neoscrypt_asm.S`
-
-echo "$LD $LDFLAGS -o neoscrypt neoscrypt.o neoscrypt_test.o neoscrypt_asm.o"
-`$LD $LDFLAGS -o neoscrypt.dll neoscrypt.o neoscrypt_test.o neoscrypt_asm.o`
+echo "$LD $LDFLAGS -o neoscrypt neoscrypt.o"
+`$LD $LDFLAGS -o neoscrypt.dll neoscrypt.o`
